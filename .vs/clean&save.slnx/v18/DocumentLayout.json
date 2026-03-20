@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35791C13-8FDC-414E-B106-5E85CB6EAED0}|clean\u0026save\\clean\u0026save.csproj|c:\\users\\samou\\documents\\_partage\\bloc 2\\c#\\projets_bloc2\\poc\\clean\u0026save\\clean\u0026save\\backup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35791C13-8FDC-414E-B106-5E85CB6EAED0}|clean\u0026save\\clean\u0026save.csproj|solutionrelative:clean\u0026save\\backup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35791C13-8FDC-414E-B106-5E85CB6EAED0}|clean\u0026save\\clean\u0026save.csproj|C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\backupstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35791C13-8FDC-414E-B106-5E85CB6EAED0}|clean\u0026save\\clean\u0026save.csproj|solutionrelative:clean\u0026save\\backupstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35791C13-8FDC-414E-B106-5E85CB6EAED0}|clean\u0026save\\clean\u0026save.csproj|C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35791C13-8FDC-414E-B106-5E85CB6EAED0}|clean\u0026save\\clean\u0026save.csproj|solutionrelative:clean\u0026save\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35791C13-8FDC-414E-B106-5E85CB6EAED0}|clean\u0026save\\clean\u0026save.csproj|C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35791C13-8FDC-414E-B106-5E85CB6EAED0}|clean\u0026save\\clean\u0026save.csproj|solutionrelative:clean\u0026save\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35791C13-8FDC-414E-B106-5E85CB6EAED0}|clean\u0026save\\clean\u0026save.csproj|C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35791C13-8FDC-414E-B106-5E85CB6EAED0}|clean\u0026save\\clean\u0026save.csproj|solutionrelative:clean\u0026save\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Backup.cs",
+              "DocumentMoniker": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\Backup.cs",
+              "RelativeDocumentMoniker": "clean\u0026save\\Backup.cs",
+              "ToolTip": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\Backup.cs",
+              "RelativeToolTip": "clean\u0026save\\Backup.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwDwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T15:53:58.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BackupState.cs",
+              "DocumentMoniker": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\BackupState.cs",
+              "RelativeDocumentMoniker": "clean\u0026save\\BackupState.cs",
+              "ToolTip": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\BackupState.cs",
+              "RelativeToolTip": "clean\u0026save\\BackupState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T10:44:25.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\Form1.cs",
+              "RelativeDocumentMoniker": "clean\u0026save\\Form1.cs",
+              "ToolTip": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\Form1.cs",
+              "RelativeToolTip": "clean\u0026save\\Form1.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwC8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T15:56:01.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "clean\u0026save\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\Form1.Designer.cs",
+              "RelativeToolTip": "clean\u0026save\\Form1.Designer.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAD4vysAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T17:15:56.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\Form1.cs",
+              "RelativeDocumentMoniker": "clean\u0026save\\Form1.cs",
+              "ToolTip": "C:\\Users\\samou\\Documents\\_partage\\Bloc 2\\C#\\projets_Bloc2\\poc\\clean\u0026save\\clean\u0026save\\Form1.cs [Design]",
+              "RelativeToolTip": "clean\u0026save\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T11:27:59.658Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\clean&save.csproj.AssemblyReference.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\clean_save.Form1.resources
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\clean_save.Properties.Resources.resources
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\clean&save.csproj.GenerateResource.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\clean&save.csproj.CoreCompileInputs.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\bin\Debug\clean&save.exe.config
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\bin\Debug\clean&save.exe
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\bin\Debug\clean&save.pdb
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\clean&save.exe
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\clean&save.pdb
