@@ -1,0 +1,17 @@
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\bin\Debug\net10.0-windows\clean_save.exe
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\bin\Debug\net10.0-windows\clean_save.deps.json
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\bin\Debug\net10.0-windows\clean_save.runtimeconfig.json
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\bin\Debug\net10.0-windows\clean_save.dll
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\bin\Debug\net10.0-windows\clean_save.pdb
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\clean_save.Form1.resources
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\clean_save.csproj.GenerateResource.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\clean_save.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\clean_save.AssemblyInfoInputs.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\clean_save.AssemblyInfo.cs
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\clean_save.csproj.CoreCompileInputs.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\clean_save.sourcelink.json
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\clean_save.dll
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\refint\clean_save.dll
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\clean_save.pdb
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\clean_save.genruntimeconfig.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\projets_Bloc2\poc\clean&save\clean&save\obj\Debug\net10.0-windows\ref\clean_save.dll

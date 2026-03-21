@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,65 +15,72 @@ namespace clean_save
 {
     public partial class Form1 : Form
     {
+        Backup backup;
         public Form1()
-            
-        {
 
+        {
             InitializeComponent();
+
+            label1.AutoSize = false;
+            label1.MaximumSize = new Size(200, 0);
+            label1.Size = new Size(200, 100);
+
+            backup = new Backup();
         }
 
-        CancellationTokenSource _cts;
-        Task maTache;
-        CancellationToken token;
+        CancellationTokenSource tokenSource;
         private async void button1_Click(object sender, EventArgs e)
         {
-            _cts = new CancellationTokenSource();
-            token = _cts.Token;
-
+            tokenSource = new CancellationTokenSource();
             button1.Enabled = false;
             button2.Enabled = true;
+            string dest = Backup.DestinationFolder();
 
-            maTache = simulatedTask();
-            await maTache;
+            Directory.CreateDirectory(@"C:\test\niveau1\niveau2\niveau3");
 
-            if (token.IsCancellationRequested)
+            IProgress<string> progressBackup = new Progress<string>(message =>
             {
-                Invoke(new Action(() => label1.Text = label1.Text = "Annulé proprement"));
-            }
-            else
-            {
-                Invoke(new Action(() => label1.Text = label1.Text = "Terminé"));
-            }
+                label1.Text = message;
+            });
 
-            button1.Enabled = true; button2.Enabled = false;
-        }
+            CancellationToken token = tokenSource.Token;
 
-        public async Task simulatedTask()
-        {
-            bool continu = token.IsCancellationRequested;
-            int i;
-            for (i = 0; i < 10 && continu; i++)
-            {
-                Invoke(new Action(() => label1.Text = label1.Text = "Étape " + i + "/10"));
-                await Task.Delay(1000);
-            }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
             try
             {
-                _cts.Cancel();
+                BackupState resultat = await backup.LaunchAll(dest, progressBackup, token);
+                if (resultat == BackupState.Success)
+                {
+                    label1.Text = "Succès de l'opération de sauvegarde et nettoyage !";
+                }
+                else if (resultat == BackupState.Failed)
+                {
+                    label1.Text = "Echec de l'opération de sauvegarde et nettoyage !";
+                }
+                else
+                {
+                    label1.Text = "Opération de sauvegarde et nettoyage annulé !";
+                }
             }
-            catch (Exception ex)
+            catch (FileNotFoundException ex)
             {
-                Invoke(new Action(() => label1.Text = " Veuillez appuyer Lancer avant d'appuyer Annuler !"));
+                MessageBox.Show(ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                button1.Enabled = true;
+                button2.Enabled = false;
             }
+            
+
+            button1.Enabled = true;
+            button2.Enabled = false;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            tokenSource.Cancel();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
