@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
@@ -17,10 +18,9 @@ namespace clean_save
         string sourcePath;
 
         //constructor
-        public Backup()
+        public Backup(string path)
         {
-            sourcePath = SourceFolder();
-            if (sourcePath == null) throw new InvalidOperationException("[ERREUR] Impossible de déterminer le dossier source.");
+            sourcePath = path;
         }
 
         /*
@@ -29,39 +29,9 @@ namespace clean_save
          */
         public static string DayOfTheWeek()
         {
-
             DateTime todayDate = DateTime.Now;
-            int dayNumber = (int)todayDate.DayOfWeek;
-
-            string dayName = " ";
-            switch (dayNumber)
-            {
-                case 0:
-                    dayName = "dimanche";
-                    break;
-                case 1:
-                    dayName = "lundi";
-                    break;
-                case 2:
-                    dayName = "mardi";
-                    break;
-                case 3:
-                    dayName = "mercredi";
-                    break;
-                case 4:
-                    dayName = "jeudi";
-                    break;
-                case 5:
-                    dayName = "vendredi";
-                    break;
-                case 6:
-                    dayName = "samedi";
-                    break;
-                default:
-                    return "Une erreur est survenue lors du calcul du jour de la semaine";
-            }
-
-            return dayName;
+            CultureInfo cultureFr = new CultureInfo("fr-FR");
+            return todayDate.ToString("dddd", cultureFr);
         }
 
         /*
@@ -70,7 +40,6 @@ namespace clean_save
          */
         public static string ProjectRoot()
         {
-
             string actualPath = AppDomain.CurrentDomain.BaseDirectory;
             string rootPath = null;
 
@@ -90,17 +59,7 @@ namespace clean_save
         public static string DestinationFolder()
         {
             string dayName = DayOfTheWeek();
-            Directory.CreateDirectory(Path.Combine(ProjectRoot(), "test", "niveau1", "niveau2", "niveau3"));
             return Path.Combine(ProjectRoot(), "destination_backup", dayName);
-        }
-
-        /*
-         *utility class to get the path of the source project 
-         *static because only other class use it and no instance will use it
-         */
-        public static string SourceFolder()
-        {
-            return Path.Combine(ProjectRoot(), "source_backup");
         }
 
         /*
@@ -110,7 +69,6 @@ namespace clean_save
          */
         private async Task<BackupState> LaunchBackup(string destination, IProgress<string> progress, CancellationToken token)
         {
-
             string rclonePath = Path.Combine(ProjectRoot(), "rclone", "rclone.exe");
 
             Process process = new Process();
@@ -130,49 +88,58 @@ namespace clean_save
             catch (OperationCanceledException)
             {
                 process.Kill();
+                progress.Report("Sauvegarde annulé");
                 return BackupState.Canceled;
                 
             }
 
             if(process.ExitCode > 0)
             {
+                progress.Report("Sauvegarde échoué");
                 return BackupState.Failed;
             }
+            progress.Report("Sauvegarde terminé avec succès");
             return BackupState.Success;
         }
 
+        /*
+         *launch the cleanUp and returns a BackupState object that indicates whether
+         *the backup was successful, failed, or was canceled(this provides greater 
+         *clarity than simply returning a value).
+         */
         private static async Task<BackupState> Cleanup(IProgress<string> progress, CancellationToken token)
         {
-            for (int i = 0; i < 29 && !token.IsCancellationRequested; i++)
+            for (int i = 0; i < 2 && !token.IsCancellationRequested; i++)
             {
+                progress.Report("Nettoyage en cours...");
                 try
                 {
                     await Task.Delay(1000, token);
                 }
                 catch (OperationCanceledException)
                 {
+                    progress.Report("Nettoyage annulé");
                     return BackupState.Canceled;
                 }
-                progress.Report("Nettoyage en cours...");
             }
+            progress.Report("Nettoyage terminé avec succès");
             return BackupState.Success;
         }
 
-        public async Task<BackupState> LaunchAll(string destination, IProgress<string> progress, CancellationToken token)
+        public async Task<BackupState> LaunchAll(string destination, IProgress<string> progressBackup, IProgress<string> progressClean, CancellationToken token)
         {
             ArgumentNullException.ThrowIfNull(destination, "[ERREUR] chemin vers le dossier de destination null.");
-            ArgumentNullException.ThrowIfNull(progress, "[ERREUR] message de progres null");
+            ArgumentNullException.ThrowIfNull(progressBackup, "[ERREUR] message de progres null");
 
             string rclonePath = Path.Combine(ProjectRoot(), "rclone", "rclone.exe");
             if (!File.Exists(rclonePath))
             {
                 throw new FileNotFoundException("[ERREUR] rclone.exe introuvable :", rclonePath);
-
             }
             Directory.CreateDirectory(destination);
 
-            Task<BackupState> backup = LaunchBackup(destination,progress, token);//To keep the return of the function
-            Task<BackupState> clean = Cleanup(progress, token);
+            Task<BackupState> backup = LaunchBackup(destination,progressBackup, token);//To keep the return of the function
+            Task<BackupState> clean = Cleanup(progressClean, token);
             await Task.WhenAll(backup, clean);
 
             BackupState state = BackupState.Success;
